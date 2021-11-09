@@ -6,6 +6,20 @@
    <title>ブラウザでプッシュ通知を実装</title>
  </head>
  <body>
+ <script>
+ function push(){
+  Push.create("更新情報", 
+   {
+    body: "ブログの更新をお知らせします!",
+    icon: 'casley_logo.png',
+    timeout: 8000,
+    onClick: function () {
+    window.focus(); 
+    this.close();
+    }
+  })
+}
+</script>
   <center>
    <h1 style="margin-top: 300px">ブラウザでプッシュ通知を実装しよう</h1>
   </center>
